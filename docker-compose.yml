@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  server:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - "8501:8501"
+    environment:
+      - COINBASE_API_BASE_URL
+      - COINBASE_API_BASE_URL_WSS
+      - COINBASE_API_KEY
+      - COINBASE_API_SECRET
+      - COINBASE_API_PASSPHRASE
